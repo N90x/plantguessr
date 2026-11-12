@@ -14,7 +14,8 @@ let colours = {
 
 async function setup() {
   plantList = await loadJSON('carnivplants.json') // assets\jsontrove\carnivplants.json
-  console.log(plantList)
+  //console.log(plantList)
+  console.log('Hello World')
   cnv = createCanvas(windowWidth - margin, windowHeight - margin);
   cnv.position(margin/2, margin/2, 'fixed');
   textAlign(CENTER, CENTER)
