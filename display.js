@@ -11,6 +11,11 @@ function getRandomPlant() {
 }
 
 function giveHint() {
+    if (selectedPlant == undefined) {
+        beginGame()
+        return
+    }
+    
     curLvl++
     if (curLvl==1) {
         hintButton.html('Show Genus')
