@@ -13,7 +13,7 @@ let colours = {
 }
 
 async function setup() {
-  plantList = await loadJSON('/assets/jsontrove/carnivplants.json') // assets\jsontrove\carnivplants.json
+  plantList = await loadJSON('carnivplants.json') // assets\jsontrove\carnivplants.json
   console.log(plantList)
   cnv = createCanvas(windowWidth - margin, windowHeight - margin);
   cnv.position(margin/2, margin/2, 'fixed');
