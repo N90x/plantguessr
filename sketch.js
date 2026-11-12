@@ -27,22 +27,27 @@ async function setup() {
   let y = height - 100
   guessInput.position(x, y)
   
-  hintButton = createButton('Show Country')
+  hintButton = createButton('Begin')
   hintButton.position(x, y+25)
   hintButton.mousePressed(giveHint)
 
   guessInput.hide()
-  hintButton.hide()
+  //hintButton.hide()
 
+}
+
+function beginGame() {
+  plantList = Object.values(plantList)
+    selectedPlant = getRandomPlant()
+    guessInput.show()
+    hintButton.show()
+  hintButton.html('Show Country')
 }
 
 function keyPressed() {
   if (key == ' ') {
     if (selectedPlant == undefined) {
-    plantList = Object.values(plantList)
-    selectedPlant = getRandomPlant()
-    guessInput.show()
-    hintButton.show()
+      beginGame()
     } else {
       giveHint()
     }
